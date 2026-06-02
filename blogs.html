@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Blogs — Ruhh</title>
+    <link rel="stylesheet" href="blogs.css">
+</head>
+<body>
+
+<a href="landing.html" class="logo"><h1>Ruhh<span>.</span></h1></a>
+<div class="back-btn"><a href="landing.html"><i class="fas fa-arrow-left"></i></a></div>
+
+<section class="hero">
+    <i class="fa-solid fa-book-medical" style="color: #f2b1d9;"></i>
+    <h1 class="hero-title">Mental Health <span>Explained</span></h1>
+    <p class="hero-sub">Research-backed, information on the most common mental health conditions found in Pakistan.</p>
+</section>
+
+<div class="page-layout">
+
+<!-- STICKY SIDE NAV -->
+<nav class="side-nav">
+    <p class="nav-label">Jump to</p>
+    <a href="#depression" class="nav-link"><i class="fa-solid fa-cloud-rain"></i> Depression</a>
+    <a href="#anxiety"    class="nav-link"><i class="fa-solid fa-heart-pulse"></i> Anxiety</a>
+    <a href="#bipolar"    class="nav-link"><i class="fa-solid fa-bolt"></i> Bipolar</a>
+    <a href="#ptsd"       class="nav-link"><i class="fa-solid fa-user-shield"></i> PTSD</a>
+    <a href="#autism"     class="nav-link"><i class="fa-solid fa-puzzle-piece"></i> Autism</a>
+</nav>
+
+<main class="blog-content">
+
+<!-- ══ DEPRESSION ══ -->
+<section id="depression" class="blog-section">
+    <div class="section-header depression-header">
+        <div class="section-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+        <div><h2>Depression</h2><p class="section-tag">Major Depressive Disorder (MDD)</p></div>
+    </div>
+    <div class="definition-card">
+        <h3>What is Depression?</h3>
+        <p>Depression (Major Depressive Disorder) is a common and serious medical illness that negatively affects how you feel, the way you think, and how you act. It causes persistent feelings of sadness and loss of interest in activities once enjoyed, and can lead to a variety of emotional and physical problems that decrease a person's ability to function at work and at home.</p>
+        <p>Symptoms must last at least two weeks and include persistent sad or "empty" mood, loss of pleasure, changes in appetite, sleep disturbances, fatigue, feelings of worthlessness, difficulty thinking, and in severe cases, thoughts of death or suicide.</p>
+        <div class="stat-row">
+            <div class="stat"><span>280M</span><p>people affected worldwide</p></div>
+            <div class="stat"><span>3.8%</span><p>of global population</p></div>
+            <div class="stat"><span>~50%</span><p>cases go untreated</p></div>
+        </div>
+    </div>
+    <div class="image-placeholder">
+        <img src="depresion.jpg" alt="Depression" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-fallback"><i class="fa-solid fa-image"></i><span>Add image: depression_img.jpg</span></div>
+    </div>
+    <h3 class="studies-title"><i class="fa-solid fa-flask"></i> Research Studies</h3>
+    <div class="study-card">
+        <div class="study-number">01</div>
+        <div class="study-body">
+            <h4>The Effectiveness of Antidepressants vs. Psychotherapy</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Cuijpers et al., <em>World Psychiatry</em>, 2019</p>
+            <p>This large-scale meta-analysis of over 500 randomised controlled trials found that both antidepressants and CBT are effective for major depression. Crucially, the combination of both treatments produced significantly better outcomes than either alone, with remission rates improving by up to 30%. The study underscores that depression is not a "one-size-fits-all" condition and personalised treatment plans yield the best results.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">02</div>
+        <div class="study-body">
+            <h4>Exercise as a Treatment for Depression</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Blumenthal et al., <em>Archives of Internal Medicine</em>, 1999</p>
+            <p>A landmark study compared aerobic exercise, antidepressant medication, and a combination in older adults with MDD. After 16 weeks all three groups showed similar reductions in depression. However, at 10-month follow-up, exercise group participants had significantly lower relapse rates (8%) compared to the medication group (38%), suggesting exercise produces more durable antidepressant effects by promoting neuroplasticity and increasing BDNF.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">03</div>
+        <div class="study-body">
+            <h4>Depression and Neuroinflammation</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Miller &amp; Raison, <em>Nature Reviews Immunology</em>, 2016</p>
+            <p>This pivotal paper established a robust link between chronic inflammation and depression. Elevated inflammatory markers (IL-6, TNF-α, CRP) are consistently higher in people with depression. The study proposed that the brain's immune response may alter neurotransmitter metabolism, reduce neuroplasticity, and cause behavioural symptoms of depression — opening the door to anti-inflammatory treatments as a new therapeutic frontier.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ ANXIETY ══ -->
+<section id="anxiety" class="blog-section">
+    <div class="section-header anxiety-header">
+        <div class="section-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div><h2>Clinical Anxiety</h2><p class="section-tag">Generalised Anxiety Disorder (GAD) &amp; Related Conditions</p></div>
+    </div>
+    <div class="definition-card">
+        <h3>What is Clinical Anxiety?</h3>
+        <p>Anxiety disorders are the most common mental health conditions globally. Unlike everyday worry, clinical anxiety is persistent, excessive, and interferes significantly with daily life. Generalised Anxiety Disorder involves chronic, uncontrollable worry about many areas of life. Other anxiety disorders include Panic Disorder, Social Anxiety Disorder, and Specific Phobias.</p>
+        <p>Physical symptoms include rapid heartbeat, shortness of breath, muscle tension, sweating, and fatigue. Psychological symptoms include excessive worry, difficulty concentrating, irritability, and sleep disturbance. Symptoms must be present for at least 6 months for a GAD diagnosis.</p>
+        <div class="stat-row">
+            <div class="stat"><span>301M</span><p>people affected worldwide</p></div>
+            <div class="stat"><span>4%</span><p>of global population</p></div>
+            <div class="stat"><span>2×</span><p>more common in women</p></div>
+        </div>
+    </div>
+    <div class="image-placeholder">
+        <img src="anxiety.jpg" alt="Anxiety" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-fallback"><i class="fa-solid fa-image"></i><span>Add image: anxiety_img.jpg</span></div>
+    </div>
+    <h3 class="studies-title"><i class="fa-solid fa-flask"></i> Research Studies</h3>
+    <div class="study-card">
+        <div class="study-number">01</div>
+        <div class="study-body">
+            <h4>CBT for Generalised Anxiety Disorder</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Hofmann et al., <em>Psychiatric Clinics of North America</em>, 2017</p>
+            <p>This comprehensive meta-analysis confirmed that Cognitive Behavioural Therapy is the gold-standard psychological treatment for GAD, with effect sizes ranging from moderate to large. The review found that CBT produces durable improvements at 12-month follow-up and is equally effective in group or individual formats, making it a highly scalable treatment option for healthcare systems worldwide.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">02</div>
+        <div class="study-body">
+            <h4>The Amygdala's Role in Anxiety</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> LeDoux &amp; Pine, <em>American Journal of Psychiatry</em>, 2016</p>
+            <p>This influential neuroscience paper demonstrated via neuroimaging that the amygdala, the brain's threat-detection hub, becomes hyperreactive in anxiety disorders, triggering defensive responses even in the absence of real danger. This research reshaped treatment approaches, explaining why both top-down (CBT, mindfulness) and bottom-up (medication) approaches are necessary for complete symptom relief.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">03</div>
+        <div class="study-body">
+            <h4>Mindfulness-Based Stress Reduction vs. Medication for Anxiety</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Hoge et al., <em>JAMA Psychiatry</em>, 2023</p>
+            <p>This RCT directly compared MBSR with escitalopram (a leading anti-anxiety medication) in adults with anxiety disorders. Both treatments produced equivalent reductions in anxiety symptoms over 8 weeks, with MBSR showing a 30% reduction in anxiety scores — comparable to the medication group. This is the first high-quality evidence that mindfulness is as effective as first-line pharmacotherapy for anxiety disorders.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ BIPOLAR ══ -->
+<section id="bipolar" class="blog-section">
+    <div class="section-header bipolar-header">
+        <div class="section-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div><h2>Bipolar Disorder</h2><p class="section-tag">Bipolar I, Bipolar II &amp; Cyclothymic Disorder</p></div>
+    </div>
+    <div class="definition-card">
+        <h3>What is Bipolar Disorder?</h3>
+        <p>Bipolar disorder is characterised by extreme mood episodes — from emotional highs (mania or hypomania) to lows (depression). During manic episodes a person may feel euphoric, full of energy, or unusually irritable. During depressive episodes they may feel sad, hopeless, and lose interest in most activities.</p>
+        <p>Bipolar I involves full manic episodes lasting at least 7 days. Bipolar II involves hypomanic episodes (less severe) and depressive episodes. Mood episodes can affect sleep, energy, judgment, and behaviour, and significantly disrupt relationships and work.</p>
+        <div class="stat-row">
+            <div class="stat"><span>40M</span><p>people affected worldwide</p></div>
+            <div class="stat"><span>0.5–1%</span><p>of global population</p></div>
+            <div class="stat"><span>10 yrs</span><p>average delay to diagnosis</p></div>
+        </div>
+    </div>
+    <div class="image-placeholder">
+        <img src="bpd.webp" alt="Bipolar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-fallback"><i class="fa-solid fa-image"></i><span>Add image: bipolar_img.jpg</span></div>
+    </div>
+    <h3 class="studies-title"><i class="fa-solid fa-flask"></i> Research Studies</h3>
+    <div class="study-card">
+        <div class="study-number">01</div>
+        <div class="study-body">
+            <h4>Lithium's Neuroprotective Effects in Bipolar Disorder</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Nunes et al., <em>Bipolar Disorders</em>, 2007</p>
+            <p>This neuroimaging study found that patients treated with lithium showed significantly greater grey matter volume in prefrontal cortex regions compared to unmedicated patients. Lithium — the cornerstone mood stabiliser for over 50 years — appears not just to reduce mood episodes but to actively protect and regenerate brain tissue in areas responsible for emotional regulation, impulse control, and decision-making.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">02</div>
+        <div class="study-body">
+            <h4>Sleep Disruption as a Trigger for Bipolar Episodes</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Harvey et al., <em>Annual Review of Clinical Psychology</em>, 2011</p>
+            <p>This review established sleep disturbance as both a symptom and a causal trigger of bipolar mood episodes. Even one night of sleep loss can precipitate a manic episode in vulnerable individuals. Social Rhythm Therapy (SRT), which stabilises daily routines and sleep patterns, was shown to significantly reduce relapse rates when combined with medication.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">03</div>
+        <div class="study-body">
+            <h4>Genetic Architecture of Bipolar Disorder</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Mullins et al., <em>Nature Genetics</em>, 2021</p>
+            <p>This landmark genome-wide association study of over 41,000 bipolar cases identified 64 genomic loci associated with bipolar disorder, many overlapping with genes implicated in schizophrenia and depression. The findings confirmed bipolar disorder's strong heritability (~60–80%) and revealed shared genetic risk with other psychiatric conditions, pointing toward new biological targets for future drug development.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ PTSD ══ -->
+<section id="ptsd" class="blog-section">
+    <div class="section-header ptsd-header">
+        <div class="section-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div><h2>PTSD</h2><p class="section-tag">Post-Traumatic Stress Disorder</p></div>
+    </div>
+    <div class="definition-card">
+        <h3>What is PTSD?</h3>
+        <p>Post-Traumatic Stress Disorder (PTSD) is a psychiatric disorder that may occur in people who have experienced or witnessed a traumatic event such as a natural disaster, serious accident, war/combat, or violent personal assault. It has been known by many names in the past, such as "shell shock" and "combat fatigue."</p>
+        <p>PTSD is characterised by four symptom clusters: intrusion (flashbacks, nightmares), avoidance (of trauma-related triggers), negative alterations in cognition and mood (guilt, emotional numbing), and hyperarousal (hypervigilance, sleep disturbance, irritability). Symptoms must last more than one month and significantly impair functioning.</p>
+        <div class="stat-row">
+            <div class="stat"><span>3.9%</span><p>lifetime prevalence globally</p></div>
+            <div class="stat"><span>70%</span><p>adults experience trauma</p></div>
+            <div class="stat"><span>20%</span><p>develop PTSD after trauma</p></div>
+        </div>
+    </div>
+    <div class="image-placeholder">
+        <img src="ptsd.jpg" alt="PTSD" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-fallback"><i class="fa-solid fa-image"></i><span>Add image: ptsd_img.jpg</span></div>
+    </div>
+    <h3 class="studies-title"><i class="fa-solid fa-flask"></i> Research Studies</h3>
+    <div class="study-card">
+        <div class="study-number">01</div>
+        <div class="study-body">
+            <h4>EMDR vs. CBT for PTSD Treatment</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Bisson et al., <em>Cochrane Database of Systematic Reviews</em>, 2013</p>
+            <p>This Cochrane review analysed 70 randomised controlled trials comparing trauma-focused therapies for PTSD. Both EMDR and trauma-focused CBT were found to be highly effective, producing large reductions in PTSD symptom severity. EMDR achieved comparable results to CBT in fewer sessions for many patients, and both were confirmed as first-line treatments.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">02</div>
+        <div class="study-body">
+            <h4>The Neurobiology of Traumatic Memory</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Pitman et al., <em>Nature Reviews Neuroscience</em>, 2012</p>
+            <p>This foundational review explained why traumatic memories are so persistent. Trauma activates the amygdala and floods the brain with stress hormones, which "over-consolidate" the memory. The hippocampus, which normally contextualises memories in time and place, becomes dysregulated, causing flashbacks to feel like they are happening in the present — validating exposure-based therapies that safely reactivate traumatic memories to allow re-encoding.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">03</div>
+        <div class="study-body">
+            <h4>MDMA-Assisted Therapy for Treatment-Resistant PTSD</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Mitchell et al., <em>Nature Medicine</em>, 2021</p>
+            <p>This Phase 3 clinical trial found that after three MDMA-assisted therapy sessions, 67% of participants no longer met PTSD diagnostic criteria — compared to 32% in the placebo group. This is among the most dramatic treatment outcomes ever recorded for PTSD and has accelerated MDMA toward regulatory approval as a breakthrough therapy, appearing to reduce amygdala reactivity so patients can process traumatic memories without being overwhelmed.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ AUTISM ══ -->
+<section id="autism" class="blog-section">
+    <div class="section-header autism-header">
+        <div class="section-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <div><h2>Autism</h2><p class="section-tag">Autism Spectrum Disorder (ASD)</p></div>
+    </div>
+    <div class="definition-card">
+        <h3>What is Autism Spectrum Disorder?</h3>
+        <p>Autism Spectrum Disorder (ASD) is a complex neurodevelopmental condition characterised by differences in social communication and interaction, and the presence of restricted, repetitive patterns of behaviour, interests, or activities. "Spectrum" reflects the wide variation in challenges and strengths of each person with ASD.</p>
+        <p>Core features include difficulty with social-emotional reciprocity, nonverbal communication challenges, insistence on sameness, highly restricted interests, and hyper- or hyposensitivity to sensory input. Importantly, autism is not an illness — it is a different way of experiencing and interacting with the world.</p>
+        <div class="stat-row">
+            <div class="stat"><span>1 in 100</span><p>children globally</p></div>
+            <div class="stat"><span>4×</span><p>more diagnosed in boys</p></div>
+            <div class="stat"><span>~80%</span><p>heritability estimated</p></div>
+        </div>
+    </div>
+    <div class="image-placeholder">
+        <img src="autism.jpg" alt="Autism" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-fallback"><i class="fa-solid fa-image"></i><span>Add image: autism_img.jpg</span></div>
+    </div>
+    <h3 class="studies-title"><i class="fa-solid fa-flask"></i> Research Studies</h3>
+    <div class="study-card">
+        <div class="study-number">01</div>
+        <div class="study-body">
+            <h4>Early Intervention and Brain Plasticity in Autism</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Dawson et al., <em>Pediatrics</em>, 2010</p>
+            <p>This landmark RCT evaluated the Early Start Denver Model (ESDM) in toddlers with ASD aged 18–30 months. Children receiving ESDM for 2 years showed significantly greater improvements in IQ, language ability, and adaptive behaviour. EEG scans showed ESDM children developed more normalised brain activity patterns in response to social stimuli, demonstrating that early intervention can meaningfully shape neural development during critical windows of brain plasticity.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">02</div>
+        <div class="study-body">
+            <h4>The "Female Autism Phenotype" and Diagnosis Disparities</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Hull et al., <em>Journal of Autism and Developmental Disorders</em>, 2017</p>
+            <p>This study explored "camouflaging" — masking autistic traits to fit social environments — and found it is significantly more prevalent in autistic women and girls. The research explained why autism is consistently underdiagnosed in females (diagnosed on average 4 years later than males), and highlighted the mental health toll of masking, which is strongly associated with anxiety, depression, and autistic burnout.</p>
+        </div>
+    </div>
+    <div class="study-card">
+        <div class="study-number">03</div>
+        <div class="study-body">
+            <h4>Gut Microbiome and Autism Spectrum Disorder</h4>
+            <p class="study-meta"><i class="fa-solid fa-book"></i> Kang et al., <em>Cell</em>, 2019</p>
+            <p>This groundbreaking trial treated 18 autistic children with Microbiota Transfer Therapy over 10 weeks. Not only did gut symptoms improve dramatically, but autism-related behaviours improved by 45% on standardised scales. At 2-year follow-up, improvements were maintained and even strengthened, providing compelling evidence for the gut-brain axis in autism and how gut bacteria influence neurodevelopment and behaviour.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+</div>
+
+<div class="spacer"></div>
+
+<footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="about.html">About Us</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="helplines.html">Helpline</a>
+    </div>
+    <div class="footer-center">
+        <div class="footer-top"><h3>Join Our Community</h3></div>
+        <form class="sub" id="subscribe-form">
+            <input type="email" id="email-input" placeholder="Enter your email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+        <p id="subscribe-msg" style="display:none; color:#a22fb3; font-size:13px; margin-top:8px;"></p>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>2026 Ruhh. All Rights Reserved.</p></div>
+</footer>
+
+<script>
+document.getElementById("subscribe-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email-input").value.trim();
+    const msg = document.getElementById("subscribe-msg");
+    const btn = this.querySelector("button");
+    if (!email) return;
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    fetch("subscribe.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+    })
+    .then(r => r.json())
+    .then(data => {
+        msg.style.display = "block";
+        msg.textContent = data.success ? "💜 Thank you! You're now part of our community." : "Something went wrong.";
+        document.getElementById("email-input").value = "";
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        setTimeout(() => msg.style.display = "none", 4000);
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
