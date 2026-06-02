@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+ 
+
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box; 
+font-family: 'Poppins', monospace, sans-serif;
+}
+body { 
+   
+    background: linear-gradient(135deg,#fff0f5, #f0e6ff, #e6faff);
+    color: #a22fb3;
+
+}
+.background { 
+
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+  background: rgba(255, 255, 255, 0.8); /* pastel + transparency */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 350px;
+    overflow: visible;
+}
+
+  
+
+.form-box
+ label 
+{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #a22fb3;
+    font-size: 14px;
+    
+
+
+}
+
+
+
+.form-box input, .form-box select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e6d5f0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* pastel + transparency */
+}
+
+.form-box input:focus {
+    outline: none;
+    border-color: #a22fb3;
+    background-color: rgba(162, 47, 179, 0.05);
+}
+
+/* .form-box select:focus {
+    outline: none;
+    border-color: #a22fb3;
+    background-color: rgba(162, 47, 179, 0.05);
+} */
+
+.form-box {
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #a22fb3;
+} 
+button {
+    width: 100%;
+    padding: 12px;
+     background: linear-gradient(135deg, #f2b1d9, #c2b2ed);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+     background: linear-gradient(135deg,  #f2b1d9, #a8e6f3);
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+ 
+a {
+    color: #2e23ffe3;      /* purple tone */
+    text-decoration: none;
+    font-weight: 500;
+    font-weight: bolder;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.message {
+    margin-top: 15px;   
+    text-align: center; 
+    font-size: 14px;    
+}
+
+.error-message {
+    color: #ff4d4d; /* red for errors */
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ff4d4d;
+    border-radius: 5px;
+    background-color: rgba(255, 77, 77, 0.1);
+
+}
+
+
+
+
+.logo  {
+
+position: absolute;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: monospace;
+    /* color: #e19bdc; */
+    color: #bc6db7;
+    padding: 10px 15px;              /* creates space for background */
+    display: inline-block;
+
+    /* background: rgba(255, 255, 255, 0.65);  */
+    background: transparent; /* soft white */
+    backdrop-filter: blur(8px);              /* glass effect */
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 15px;                     /* smooth edges */
+    box-shadow: 0 6px 20px rgba(24, 18, 18, 0.116);  /* soft lift */
+
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 10px;
+    margin-left: 15px;
+
+      transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+}
+
+
+
+
+/* remove any accidental underline */
+.logo::after {
+    display: none;
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: #f2b1d9;
+    transition: 0.4s ease;
+}
+
+.logo:hover {
+    
+    text-decoration: none;
+      transform: translateY(-2px) scale(1.05); /* slight pop */
+    box-shadow: 0 8px 30px rgba(24, 18, 18, 0.2), 
+                
+}
+
+.logo:hover span {
+    color: #b0e0e6;
+}
+
+
+
+
+
+/* Password field with show/hide */
+.password-field {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid #e6d5f0;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+}
+
+.password-field input:focus {
+    outline: none;
+    border-color: #a22fb3;
+    background-color: rgba(162, 47, 179, 0.05);
+}
+
+.password-field i {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #a22fb3;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.password-field i:hover {
+    color: #f2b1d9;
+    transform: scale(1.1);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #c2b2ed;
+    margin-bottom: 20px;
+}
+.success-message {
+    color: #2d8659;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #2d8659;
+    border-radius: 5px;
+    background-color: rgba(144, 238, 144, 0.15);
+    text-align: center;
+}
