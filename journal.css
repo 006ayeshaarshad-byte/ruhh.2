@@ -1,0 +1,861 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', monospace, Verdana, sans-serif;
+  font-size: 16px;
+  /* color: #992ca8; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('journal.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+  background-color: #f1f4e6;
+
+}
+
+
+
+
+.logo  {
+    width: fit-content;
+    display: inline-block;
+
+    font-size: 42px;
+    font-weight: 900;
+    font-family: monospace; 
+    /* color: #e19bdc; */
+color: #bc6db7;
+    padding: 12px 22px;              /* ffffffffffff space for background */
+    display: inline-block;
+
+    background: rgba(248, 244, 246, 0.927);
+      /* soft white */
+    backdrop-filter: blur(8px);              /* glass effect */
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 15px;                     /* smooth edges */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);  /* soft lift */
+
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 15px;
+    margin-left: 18px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+}
+
+
+
+
+/* remove any accidental underline */
+.logo::after {
+    display: none;
+    transition: 0.3s ease;
+    
+}
+
+.logo span {
+    color: #f2b1d9;
+ transition: 0.3s ease;
+}
+
+.logo:hover {
+    
+    transform: translateY(-2px) scale(1.05);
+}
+
+.logo:hover span {
+    color: #b0e0e6;
+}
+.back-btn {
+    position: absolute;
+    top: 3vh;
+ right: 20px;
+    font-size: 30px;
+    background: rgba(255,255,255,0.9);
+    border: 2px solid rgb(194, 178, 237);
+    border-radius: 50%;
+    width: 50px;
+        height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+ transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(242, 177, 217, 0.3);
+    z-index: 100;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+
+
+
+/* ── PAGE TITLE ── */
+h1.page-title {
+  margin-top: 60px;
+  font-size: 58px;
+  letter-spacing: 2px;
+  color: #992ca8;
+  text-align: center;
+  font-family: monospace;
+}
+
+h1.page-title span {
+  color: #f2b1d9;
+}
+
+/* ── MAIN CONTAINER ── */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 44px;
+  margin-top: 40px;
+}
+
+/* ── ADD NOTE BUTTON ── */
+#addnote {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 18px rgba(242, 177, 217, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  border: 2px dashed rgba(242, 177, 217, 0.5);
+  color: #c2b2ed;
+  font-family: 'Poppins', sans-serif;
+}
+
+#addnote i {
+  font-size: 40px;
+  color: #f2b1d9;
+}
+
+#addnote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(242, 177, 217, 0.45);
+  border-color: #f2b1d9;
+  color: #992ca8;
+}
+
+/* ── NOTE CARDS ── */
+.newnotes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mynote {
+  width: 280px;
+  min-height: 220px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 18px rgba(153, 44, 168, 0.12);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.mynote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(153, 44, 168, 0.2);
+}
+
+.mynote h2 {
+  font-size: 18px;
+  color: #992ca8;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mynote p.note-container {
+  font-size: 16px;
+  color: #5f4068;
+  line-height: 1.5;
+  flex: 1;
+  max-height: 80px;
+ 
+  overflow: hidden;
+}
+
+.mynote .date {
+  font-size: 14px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.mynote .mood {
+  font-size: 15px;
+  color: #c2b2ed;
+  font-weight: 600;
+}
+
+.mynote .delete-btn {
+  background: transparent;
+  border: none;
+  color: #c2b2ed;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mynote .delete-btn:hover {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+/* ── ADD FORM ── */
+.addform {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.97);
+  padding: 28px;
+  box-shadow: 0 8px 40px rgba(153, 44, 168, 0.2);
+  border: 2px solid rgba(242, 177, 217, 0.4);
+  border-radius: 20px;
+  max-width: 480px;
+  width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.head h3 {
+  font-size: 22px;
+  color: #992ca8;
+  font-weight: 800;
+}
+
+.head button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputs p {
+  font-size: 15px;
+  color: #7a5a8a;
+  font-weight: 600;
+}
+
+.addform input, 
+.addform textarea, 
+.addform select {
+  padding: 11px 14px;
+  border: 2px solid #f4def7;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #4e3455;
+  background: white;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.addform input:focus, 
+.addform textarea:focus, 
+.addform select:focus {
+  border-color: #992ca8;
+  box-shadow: 0 0 0 3px rgba(153, 44, 168, 0.08);
+}
+
+.addform textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.addform select {
+  cursor: pointer;
+}
+
+.addform #addbtn {
+  width: 100%;
+  padding: 13px;
+  background-color: #f2b1d9;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 6px 18px rgba(242, 177, 217, 0.4);
+}
+
+.addform #addbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(242, 177, 217, 0.55);
+  background-color: #70cbe3;
+}
+
+/* ── VIEW NOTE  ── */
+.viewNote {
+  display: none;
+  position: fixed;
+  inset: 0;
+  /* background: rgba(216, 174, 221, 0.1);
+  backdrop-filter: blur(6px); */
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.viewContent {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 32px;
+  border-radius: 20px;
+  width: 500px;
+  max-height: 85vh;
+  max-width: 90vw;
+  overflow-y: auto;
+  box-shadow: 0 12px 40px rgba(153, 44, 168, 0.2);
+  border: 1px solid rgba(242, 177, 217, 0.3);
+}
+
+#closeView {
+  background: none;
+  border: none;
+  cursor: pointer;
+  float: right;
+  transition: transform 0.3s;
+}
+
+#closeView:hover {
+  transform: rotate(90deg);
+}
+
+#viewTitle {
+  color: #992ca8;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  clear: both;
+  padding-top: 8px;
+}
+
+#viewDate {
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+#viewMood {
+  font-size: 15px;
+  color: #c2b2ed;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+#viewText {
+  font-size: 16px;
+  color: #4e3455;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── MOOD TRACKER SECTION ── */
+.mood-tracker-section {
+  padding: 0 44px 40px;
+}
+
+.mood-tracker-section h2 {
+  font-size: 32px;
+  color: #992ca8;
+  font-family: monospace;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.mood-tracker-section .tracker-sub {
+  font-size: 16px;
+  color: #9b7aaa;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+
+/* Recent mood timeline */
+.mood-timeline {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.mood-day-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 16px 14px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(153, 44, 168, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.mood-day-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(153, 44, 168, 0.18);
+}
+
+.mood-day-card .mood-emoji {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mood-day-card .mood-label {
+  font-size: 12px;
+  color: #992ca8;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.mood-day-card .mood-date {
+  font-size: 11px;
+  color: #bbb;
+  margin-top: 4px;
+}
+
+.mood-day-card .mood-title {
+  font-size: 12px;
+  color: #7a5a8a;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+}
+
+.mood-empty {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  border: 2px dashed rgba(242, 177, 217, 0.4);
+  color: #c2b2ed;
+  font-size: 15px;
+}
+
+.mood-empty i {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+  color: #f2b1d9;
+}
+
+/* ── SPACER ── */
+.spacer {
+  height: 30vh;
+}
+
+
+
+.footer {
+    position: relative;
+    overflow: visible;
+    background-color: #f9d4eb;
+    padding: 70px 60px 20px;
+    font-family: monospace, cursive, sans-serif;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-top h3 {
+    font-size: 24px;
+    color: #a22fb3;
+    margin-bottom: 0 0 8px 0;
+}
+     
+    .sub {
+        display: flex;
+        justify-content: center;
+     max-width: 320px;
+     border-radius: 25px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 4px 12px;
+        overflow: hidden;
+        /* box-shadow:  0 0 10px rgba(255, 255, 255, 0.8); */
+        margin: 15px auto;
+
+    }   
+
+    .sub input {
+        flex: 1;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 15px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.8);
+        color: #a22fb3;
+    } 
+    .sub button {
+        background: #a22fb3;
+        border: none;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        
+    }  
+    .sub button:hover {
+        background: #e0a2d8;
+    
+    }
+    .socials {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+    }
+    .socials a {
+        color: #a22fb3;
+        font-size: 30px;
+    
+        transition: 0.3s ease;
+    }
+    .socials a:hover {
+        
+        transform: translateY(-5px);
+    }
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #a22fb3;
+        
+    }   
+.footer .waves {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 0;
+}
+
+.footer .wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+bottom: 0%;
+     background: url("ai.png") repeat-x;
+    background-size: 1000px 100px; 
+
+background-blend-mode: normal;
+
+}
+
+.spacer{
+    min-height: 30vh;
+}
+.footer .wave#wave1 {
+    opacity: 1;
+    z-index: 1000;
+    animation: animateWaves 4s linear infinite;
+    bottom: 0;
+}
+
+.footer .wave#wave2 {
+    opacity: 0.5;
+    z-index: 999;
+    animation: animateWaves_02 4s linear infinite;
+    bottom: 10px;
+}
+
+.footer .wave#wave3 {
+    opacity: 0.2;
+    z-index: 1000;
+     bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.footer .wave#wave4 {
+    opacity: 0.7;
+    z-index: 999;
+    animation: animateWaves_02 3s linear infinite;
+        bottom: 20px;
+}
+
+
+
+
+
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+
+@keyframes animateWaves_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+   
+
+
+
+
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 300px;
+    font-size: 12px;
+    color: #a22fb3;
+}
+
+
+
+
+
+.footer-top h3 {
+    font-size: 20px;
+    color: #a22fb3;
+    margin: 0 0 8px 0;
+}
+
+.footer-links h3 {
+    font-size: 20px;
+    color: #a22fb3;
+    margin: 0 0 8px 0;
+}
+
+.footer-links a {
+    display: block;
+    color: #c070d0;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    line-height: 2;
+}
+
+.footer-links a:hover {
+    color: #a22fb3;
+    padding-left: 4px;
+}
+
+
+
+/* ── UPDATED MOOD TRACKER GRAPH PANEL ── */
+.mood-graph-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 2px dashed rgba(242, 177, 217, 0.5);
+  border-radius: 24px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(153, 44, 168, 0.05);
+  box-sizing: border-box;
+}
+
+.graph-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 380px; /* Taller viewport container */
+  gap: 15px;
+}
+
+/* Vertical Emoji Layout for 9 Tiers */
+.graph-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  padding: 26px 0; /* Matches internal padding parameters */
+  width: 35px;
+  border-right: 2px dashed rgba(242, 177, 217, 0.25);
+}
+
+.canvas-container {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.canvas-container svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Floating Graph Node Bubbles */
+.graph-dot-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+}
+
+/* Wide container layout rules for custom Japanese Kaomojis */
+.node-pop-avatar {
+  background: #fff;
+  border: 3px solid var(--node-color);
+  box-shadow: 0 4px 12px rgba(153, 44, 168, 0.12);
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  white-space: nowrap; /* Forces wide kaomojis to stay on a single line */
+  color: #4e3455;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.graph-dot-node:hover .node-pop-avatar {
+  transform: scale(1.15);
+  background: var(--node-color);
+  color: #fff;
+}
+
+/* Tooltip Display Configs */
+.node-tooltip {
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #4e3455;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.node-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #4e3455;
+}
+
+.graph-dot-node:hover .node-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.graph-x-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px; /* Aligns labels with the graph's left margin offset */
+  padding-top: 15px;
+  border-top: 2px dashed rgba(242, 177, 217, 0.25);
+  color: #bfa8c7;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+
+.mood-tracker-section i {
+    margin-left: 8px;
+    animation: pulse 2s infinite ease-in-out;
+;
+}
+
+@keyframes pulse {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+.spacer1 {
+    height: 15vh;
+}
