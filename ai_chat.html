@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>AI Therapist — Ruhh</title>
+    <link rel="stylesheet" href="ai_chat.css">
+</head>
+<body>
+
+<!-- LOGO -->
+<a href="landing.html" class="logo"><h1>Ruhh<span>.</span></h1></a>
+
+<!-- BACK BTN -->
+<div class="back-btn">
+    <a href="dashboard.php"  onclick="event.preventDefault(); const clickSound = document.getElementById('clickSound'); if(clickSound) { clickSound.play().catch(()=>{}); setTimeout(() => window.location.href='dashboard.php', 300); }">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+</div>
+
+
+<audio id="clickSound" src="click.mp3"></audio>
+<audio id="trashSound" src="trash.mp3"></audio>
+
+<!-- TITLE -->
+<div class="ai-title">
+    <h1>Virtual Therapist</h1>
+    <p>Your friendly AI companion <i class="fa-solid fa-heart" style="color:#f2b1d9; font-size:22px;"></i></p>
+</div>
+
+<!-- CHAT AREA -->
+<div class="chat-wrapper">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <button class="new-chat-btn">
+            <i class="fa-solid fa-plus"></i> New Chat
+        </button>
+        <p class="sidebar-label">Past Conversations</p>
+        <ul class="sidebar-list"></ul>
+    </div>
+
+    <!-- CHAT POPUP -->
+    <div class="chatbot-popup">
+
+        <!-- HEADER -->
+        <div class="chat-header">
+            <div class="header-info">
+                <i class="fa-solid fa-robot"></i>
+                <div>
+                    <h2 class="logo-text">Luna <span class="online-dot"></span></h2>
+                    <p style="font-size:11px; color:#9b7aaa; margin-top:2px;">AI Therapist · Always here 💜</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="chat-body"></div>
+
+        <!-- FOOTER -->
+        <div class="chat-footer">
+            <div class="input-row">
+                <textarea
+                    placeholder="Talk to Luna..."
+                    class="message-input"
+                    maxlength="1000"
+                    rows="1"
+                ></textarea>
+                <div class="chat-controls">
+                    <button type="button" class="emoji-btn" title="Emoji">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </button>
+                    <button type="button" class="send-message" title="Send">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="char-count">0 / 1000</div>
+        </div>
+
+    </div><!-- end chatbot-popup -->
+</div><!-- end chat-wrapper -->
+
+<div class="spacer"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="about.html">About Us</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="helplines.html">Helplines</a>
+    </div>
+    <div class="footer-center">
+        <div class="footer-top"><h3>Join Our Community</h3></div>
+        <form class="sub" id="subscribe-form">
+            <input type="email" id="email-input" placeholder="Enter your email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+        <p id="subscribe-msg" style="display:none; color:#a22fb3; font-size:13px; margin-top:8px;"></p>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>2026 Ruhh. All Rights Reserved.</p></div>
+</footer>
+
+<!-- Subscribe JS -->
+<script>
+document.getElementById("subscribe-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email-input").value.trim();
+    const msg = document.getElementById("subscribe-msg");
+    const btn = this.querySelector("button");
+    if (!email) return;
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    fetch("subscribe.php", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({email}) })
+    .then(r=>r.json()).then(data=>{
+        msg.style.display="block";
+        msg.style.color = data.success ? "#a22fb3" : "#ff6b6b";
+        msg.textContent = data.success ? "💜 Thank you! You're now part of our community." : "Something went wrong.";
+        if(data.success) document.getElementById("email-input").value="";
+        btn.disabled=false; btn.innerHTML='<i class="fas fa-paper-plane"></i>';
+        setTimeout(()=>msg.style.display="none",4000);
+    }).catch(()=>{ msg.style.display="block"; msg.style.color="#ff6b6b"; msg.textContent="Connection error."; btn.disabled=false; btn.innerHTML='<i class="fas fa-paper-plane"></i>'; });
+});
+</script>
+
+<!-- Emoji Mart -->
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+<script src="ai_chat.js"></script>
+</body>
+</html>
