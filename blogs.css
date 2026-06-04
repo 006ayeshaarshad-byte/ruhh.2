@@ -820,26 +820,32 @@ background-blend-mode: normal;
 }
 
 
-/* ==========================================================================
-   14. MEDIA QUERIES (RESPONSIVENESS)
-   ========================================================================== */
-@media (max-width: 900px) {
-    .side-nav {
-        display: none;
-    }
-    
-    .hero-title {
-        font-size: 40px;
-    }
-}
 
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .side-nav { display: none; }
+    .page-layout { padding: 0 14px; }
+    .hero-title { font-size: 38px; }
+    .section-header h2 { font-size: 26px; }
+    .stat-row { flex-wrap: wrap; gap: 10px; }
+    .stat { min-width: 120px; }
+    .footer { padding: 70px 30px 20px; }
+    .footer-bottom { text-align: center; margin-right: 0; }
+}
 @media (max-width: 600px) {
-    .stat-row {
-        flex-direction: column;
-    }
-    
-    .section-header h2 {
-        font-size: 24px;
-    }
+    .hero-title { font-size: 26px; }
+    .hero-sub { font-size: 14px; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px; }
+    .section-header h2 { font-size: 20px; }
+    .definition-card { padding: 20px; }
+    .stat-row { flex-direction: column; }
+    .study-card { flex-direction: column; gap: 10px; padding: 18px; }
+    .study-number { font-size: 22px; }
+    .logo { font-size: 24px; padding: 8px 12px; }
+    .back-btn { top: 14px; }
+    .footer { padding: 70px 16px 20px; }
+    .footer-bottom { text-align: center; margin-right: 0; }
+    .spacer { min-height: 10px; }
 }
 
