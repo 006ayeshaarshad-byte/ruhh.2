@@ -859,3 +859,38 @@ background-blend-mode: normal;
 .spacer1 {
     height: 15vh;
 }
+
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    h1.page-title { font-size: 44px; margin-top: 90px; }
+    .container { padding: 20px; }
+    .mood-tracker-section { padding: 0 20px 30px; }
+    .mood-timeline { gap: 10px; }
+    .mood-day-card { min-width: 88px; padding: 12px 10px; }
+    .footer { padding: 70px 30px 20px; }
+    .footer-bottom { text-align: center; }
+}
+@media (max-width: 600px) {
+    h1.page-title { font-size: 32px; margin-top: 80px; }
+    .container { padding: 12px; gap: 12px; }
+    #addnote { width: 160px; height: 160px; }
+    #addnote i { font-size: 30px; }
+    .mynote { width: 160px; min-height: 160px; }
+    .mood-tracker-section { padding: 0 12px 20px; }
+    .mood-tracker-section h2 { font-size: 24px; }
+    .mood-timeline { gap: 8px; }
+    .mood-day-card { min-width: 76px; padding: 10px 8px; }
+    .mood-day-card .mood-emoji { font-size: 28px; }
+    .mood-freq-grid { max-width: 100%; }
+    .freq-name { width: 60px; font-size: 11px; }
+    .addform { padding: 20px 16px; }
+    .logo { font-size: 26px; padding: 8px 14px; margin-left: 10px; }
+    .back-btn { top: 14px; }
+    .footer { padding: 70px 16px 20px; }
+    .footer-bottom { text-align: center; }
+}
+
+
+
