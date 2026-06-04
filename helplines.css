@@ -548,43 +548,70 @@ background-blend-mode: normal;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-    .helplines-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px)
+ {
+    .helplines-grid
+     {
+         grid-template-columns: 1fr 1fr;
+     }
+    .hero-title { 
+        font-size: 42px;
+     }
+    .footer { 
+        padding: 70px 30px 20px;
+     }
+    .footer-bottom {
+         text-align: center;
+         }
 }
 @media (max-width: 600px) {
-    .helplines-grid { grid-template-columns: 1fr; }
-    .hero-title { font-size: 38px; }
+    .helplines-grid
+     {
+         grid-template-columns: 1fr;
+    
+    }
+    .hero-title { font-size: 30px; }
+    .hero-sub { font-size: 15px; }
+    .section-title { font-size: 26px; }
+    .reminder-card { padding: 30px 20px; }
+    .reminder-card h2 { font-size: 22px; }
+    .logo { font-size: 26px; padding: 8px 14px; }
+    .footer { padding: 70px 16px 20px; }
+    .footer-bottom { text-align: center; }
+    .spacer { min-height: 10vh; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
