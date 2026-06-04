@@ -490,3 +490,31 @@ background-blend-mode: normal;
 .spacer {
     height: 55vh; 
 }
+
+
+
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .quote-box { max-width: 90%; padding: 30px 20px; margin-top: 100px; }
+    .quote-box h2 { font-size: 22px; }
+    #quote { font-size: 16px; }
+    .logo { font-size: 32px; padding: 10px 16px; }
+    .footer { padding: 70px 30px 20px; }
+    .footer-bottom { text-align: center; }
+    .spacer { height: 20vh; }
+}
+@media (max-width: 600px) {
+    .quote-box { max-width: 95%; padding: 24px 16px; margin-top: 80px; }
+    .quote-box h2 { font-size: 18px; }
+    #quote { font-size: 14px; }
+    #author { font-size: 12px; }
+    .button-container { flex-direction: column; gap: 10px; }
+    #new-quote, .thread-btn { width: 100%; justify-content: center; }
+    .logo { font-size: 24px; padding: 8px 12px; }
+    .back-btn { top: 14px; }
+    .footer { padding: 70px 16px 20px; }
+    .footer-bottom { text-align: center; }
+    .spacer { height: 8vh; }
+}
