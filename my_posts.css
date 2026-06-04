@@ -452,6 +452,32 @@ color: #bc6db7;
 }  
 
 
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .posts-container { padding: 16px; margin-top: 90px; }
+    .page-title { font-size: 36px; }
+    .logo { font-size: 32px; padding: 10px 16px; }
+    .footer { padding: 70px 30px 20px; }
+    .footer-bottom { text-align: center; }
+    .spacer { height: 15vh; }
+}
+@media (max-width: 600px) {
+    .posts-container { padding: 12px; margin-top: 80px; }
+    .page-title { font-size: 28px; }
+    .subtitle { font-size: 14px; margin-bottom: 24px; }
+    .logo { font-size: 24px; padding: 8px 12px; margin-left: 10px; }
+    .back-btn { top: 14px; }
+    .post { padding: 16px; }
+    .btn-share { font-size: 14px; padding: 12px 20px; }
+    .footer { padding: 70px 16px 20px; }
+    .footer-bottom { text-align: center; }
+    .spacer { height: 8vh; }
+}
+
+
+
+
+
 
 
 
